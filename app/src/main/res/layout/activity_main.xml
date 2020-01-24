@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
@@ -10,25 +9,25 @@
         android:id="@+id/textLaps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
+        android:text="@string/startingLap"
         android:textSize="80sp" />
 
     <Button
         android:id="@+id/buttonLaps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Vuelta" />
+        android:text="@string/Laps" />
 
     <Button
         android:id="@+id/buttonRefresh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Reiniciar"
+        android:text="@string/Reset"
         />
 
     <ImageView
         android:id="@+id/noBackground"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/first"/>
+        android:src="@drawable/noback" />
 </LinearLayout>
