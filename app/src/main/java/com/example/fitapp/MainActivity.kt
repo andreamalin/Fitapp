@@ -49,6 +49,7 @@ class MainActivity : AppCompatActivity() {
             }
             textLaps.text = actualLaps.toString() //Showing actual lap
         } else {
+            //Showing the counting is on max
             Toast.makeText(this@MainActivity, "Llegaste al maximo", Toast.LENGTH_SHORT).show()
         }
     }
@@ -65,5 +66,6 @@ class MainActivity : AppCompatActivity() {
         actualLaps = 0
         textLaps.text = actualLaps.toString()
         this.prizeImage.setImageResource(R.drawable.noback) //show empty image
+        Toast.makeText(this@MainActivity, "Comienza de nuevo!", Toast.LENGTH_SHORT).show() //Showing refresh message
     }
 }
