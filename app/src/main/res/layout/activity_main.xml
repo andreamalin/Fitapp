@@ -16,6 +16,8 @@
         android:id="@+id/buttonLaps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:background="#AE7CFF"
         android:text="@string/Laps" />
 
     <Button
@@ -23,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Reset"
-        />
+        android:background="#AE7CFF"/>
 
     <ImageView
         android:id="@+id/noBackground"

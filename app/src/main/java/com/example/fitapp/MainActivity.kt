@@ -6,6 +6,12 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import androidx.core.app.ComponentActivity
+import androidx.core.app.ComponentActivity.ExtraData
+import androidx.core.content.ContextCompat.getSystemService
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+
+
 
 class MainActivity : AppCompatActivity() {
     //Initializing
@@ -33,6 +39,11 @@ class MainActivity : AppCompatActivity() {
             refreshLaps()
         }
 
+        buttonLaps.setOnLongClickListener{
+            Toast.makeText(this, """Faltan ${maxLaps - actualLaps} vueltas""", Toast.LENGTH_SHORT).show()
+            return@setOnLongClickListener true
+        }
+
     }
     //Showing actual lap
     private fun sumLap(){
@@ -57,6 +68,7 @@ class MainActivity : AppCompatActivity() {
     private fun showPrize(){
         if (actualLaps == 10) {
             this.prizeImage.setImageResource(R.drawable.second) //show first place price
+            Toast.makeText(this@MainActivity, "Felicidades, vas por la mitad!", Toast.LENGTH_SHORT).show()
         } else if (actualLaps == 20) {
             this.prizeImage.setImageResource(R.drawable.first) //show first place price
         }
